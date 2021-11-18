@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,400&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
+/* Nav Bar Stylings */
+nav {
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+}
+
+nav li {
+    margin: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.navtitle {
+    padding: 20px;
+}
+
+nav a, .navtitle {
+    font-family: 'Courier New', Courier, monospace
+}
+
+/* Main Content // General Styles */
+
+.pagecontainer {
+    margin: 60px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(18, 18, 156);
+}
+
+/* Home Page */
+
+.homepage{
+    height: calc(100vh - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 200px;
+}
+
+.homepage h1 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.homepage p {
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* CSS Page */
+.intro {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.csspage h1 {
+    margin: 20px;
+    font-size: 40px;
+}
+
+.csspage h2 {
+    margin-bottom: 20px;
+}
+
+.csspage ul {
+    list-style: square;
+    list-style-position: inside;
+    margin-left: 40px;
+}
+
+.row {
+    display: flex;
+}
+
+
+
+
