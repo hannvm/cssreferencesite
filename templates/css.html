@@ -5,9 +5,9 @@
     <div class="intro">
         <h1>CSS Reference</h1>
         <h2>Quick Links</h2>
-        <div class="row">
+        <div class="header_row">
             <ul>
-                <li>Text</li>
+                <li>Text and Fonts</li>
                 <li>Images</li>
                 <li>Colour and Backgrounds</li>
                 <li>Transform</li>
@@ -20,9 +20,122 @@
             </ul>
         </div>
 
-
     </div>
-    <h1>Text</h1>
+    <div class="rulesbox">
+        <h1>Shorthands</h1>
+        <p><span>Four Values: </span>are applied top, right, bottom, left</p>
+        <p><span>Three Values: </span>are applied top, right and left, bottom</p>
+        <p><span>Two values: </span>are applied top and bottom, right and left</p>
+    </div>
+    <div class="rulesbox">
+        <h1>Box Model</h1>
+        <div class="marginex">
+            <p class="bmodel">margin</p>
+            <div class="borderex">
+                <p class="bmodel">border</p>
+                <div class="paddingex">
+                    <p class="bmodel">padding</p>
+                    <div class="contentex">
+                        <p class="bmodel">content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rulesbox">
+        <h1>Margins and Padding</h1>
+        <p>auto - the browser calculates the margin</p>
+        <p>length - specifies in unit of measurement</p>
+        <p>% - specifies margin in % of width of containing element</p>
+        <p>inherit - inherited margin from parent element</p>
+        <p>Negative values are valid for margins but not padding</p>
+        <h2>Margins</h2>
+        <p><span>margin: </span>5px 10px 15px 20px</p>
+        <p><span>margin-top: </span>5px</p>
+        <p><span>margin-bottom: </span>5px</p>
+        <p><span>margin-left: </span>5px</p>
+        <p><span>margin-right: </span>5px</p>
+        <h2>Padding</h2>
+        <p><span>padding:</span> 5px 10px 15px 20px</p>
+        <p><span>padding-top:</span> 10px</p>
+        <p>When a container has a defined size, any padding will add to the overall size of the container. To control this you need box sizing:</p>
+        <p>div {</p>
+        <p class="indent">width: 200px;</p>
+        <p class="indent">padding: 20px;</p>
+        <p class="indent">box-sizing: border-box;</p>
+        <p>}</p>
+    </div>
+    <div class="rulesbox">
+        <h1>Borders</h1>
+        <p><span>border-style:</span> dotted | dashed | solid | double | groove | inset | outset | none | hidden</p>
+        <p><span>border-style:</span> dotted dashed solid none</p>
+        <p><span>border-width:</span> 5px | medium | thick</p>
+        <p><span>border-width: </span> 5px 20px</p>
+        <p class="note">applies 5px to the top and bottom and 20px on the sides</p>
+        <p><span>border-width:</span> 5px 6px 7px 8px</p>
+        <p class="note">5px on the top, 6px on the right, 7px on the botttom, and 8px left</p>
+        <p><span>border-color:</span> red | #234 | rgb(255, 0, 100)</p>
+        <p><span>border-color:</span> red green blue yellow</p>
+        <p class="note">applies red top, green right, blue bottom and yellow left</p>
+        <p><span>border:</span> 5px dashed blue</p>
+        <p class="note">you can do width, style, colour here, but only style is required</p>
+        <p class="note">the border shorthand can be applied to one side too, ie.border-left: 2px solid #333</p>
+        <p><span>border-radius:</span> 5px</p>
+    </div>
+    <div class="rulesbox">
+        <h1>Text and Fonts</h1>
+        <p><span>color:</span> blue | #333 | rgb(11,132,93);</p>
+        <p><span>text-align:</span> center | left | right | justify;</p>
+        <p><span>text-decoration:</span> none | overline | line-through | underline;</p>
+        <p><span>text-transform:</span> uppercase | lowercase | capitalize;</p>
+        <p><span>text-indent:</span> 20px;</p>
+        <p><span>letter-spacing:</span> 5px;</p>
+        <p><span>line-height</span> 0.8 | 2;</p>
+        <p><span>word-spacing</span> 10px;</p>
+        <p><span>font-family:</span> "Times New Roman", Times, serif;</p>
+        <p><span>font-style:</span> normal | italic | oblique;</p>
+        <p><span>font-weight:</span> normal | bold;</p>
+        <p><span>font-size:</span> 20px | 2.5em | 100% | 10vw</p>
+        <p class="note">em: allows users to resize the text in the browser menu. 1em = current font size (default = 16px, caculate from pixels to em: pixels/16=em)</p>
+        <p class="note">vw: viewport width. 1vw = 1% of the viewport (text size follows browser size)</p>
+        <p><span>font:</span> 18px Arial, sans-serif;</p>
+    </div>
+    <div class="rulesbox">
+        <h1>Images</h1>
+        <p><span></span></p>
+        <p><span></span></p>
+    </div>
+    <div class="rulesbox">
+        <h1>Images</h1>
+        <p><span></span></p>
+        <p><span></span></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="rule">
+            <p><span></span></p>
+        </div>
+        <div class="definition">
+            <p></p>
+        </div>
+    </div>
+
+<!--
+
+
+            <p><span>text-decoration:</span> none | overline | line-through | underline;</p>
+
+-->
     
 
 
@@ -31,9 +144,5 @@
     
 
 </div>
-
-
-
-
 
 {% endblock %}
