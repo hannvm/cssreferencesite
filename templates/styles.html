@@ -1,22 +1,25 @@
 {% extends 'layout.html' %} <!--This extends layout so you don't repeat core code-->
 
 {% block body %}
-<div class="csspage">
+<div class="pagecontainer">
+
     <div class="intro">
-        <h1>CSS Reference</h1>
+        <h1>CSS Styles</h1>
         <h2>Quick Links</h2>
         <div class="header_row">
             <ul>
-                <li>Text and Fonts</li>
-                <li>Images</li>
-                <li>Colour and Backgrounds</li>
-                <li>Transform</li>
+                <li>Shorthands</li>
+                <li>Box Model</li>
+                <li>Measurements</li>
+                <li>Height & Width</li>
+                <li>Margins & Padding</li>
             </ul>
             <ul>
-                <li>Flex Box</li>
-                <li>CSS Grid</li>
-                <li>Animations</li>
-                <li>Responsive pages</li>
+                <li>Borders</li>
+                <li>Text & Fonts</li>
+                <li>Colour & Backgrounds</li>
+                <li>Links</li>
+                <li>Lists</li>
             </ul>
         </div>
 
@@ -42,13 +45,25 @@
             </div>
         </div>
     </div>
+    <div class="rulesbox">
+        <h1>Measurements</h1>
+        <p><span>auto -</span> the browser calculates the margin</p>
+        <p><span>length -</span> specifies in unit of measurement</p>
+        <p><span>% -</span> specifies in % of containing element/block</p>
+        <p><span>inherit -</span> inherited value from parent element</p>
+    </div>
+    <div class="rulesbox">
+        <h1>Height and Width</h1>
+        <p>Height and width does not include padding, borders, or margins.</p>
+        <p><span>height:</span> 200px | 50% | auto | initial | inherit</p>
+        <p><span>width:</span> 200px | 50% | auto | initial | inherit | max-width</p>
+        <p class="note">Initial sets the value to it's default value</p>
+        <p><span>max-width:</span> 200px</p>
+        <p class="note">Block elements always take up the width available to them. Max-width sets the maximum size.(max-width overrides width)</p>
+    </div>
 
     <div class="rulesbox">
         <h1>Margins and Padding</h1>
-        <p>auto - the browser calculates the margin</p>
-        <p>length - specifies in unit of measurement</p>
-        <p>% - specifies margin in % of width of containing element</p>
-        <p>inherit - inherited margin from parent element</p>
         <p>Negative values are valid for margins but not padding</p>
         <h2>Margins</h2>
         <p><span>margin: </span>5px 10px 15px 20px</p>
@@ -102,47 +117,66 @@
         <p><span>font:</span> 18px Arial, sans-serif;</p>
     </div>
     <div class="rulesbox">
-        <h1>Images</h1>
-        <p><span></span></p>
-        <p><span></span></p>
+        <h1>Colour and Backgrounds</h1>
+        <p><span>background-color:</span> blue | rgb(0,0,255) | #333</p>
+        <p>Grey can be achieved by using equal values in all rgb values</p>
+        <p><span>color:</span> rgba(67,182,118,0.5)</p>
+        <p class="note">The last value in rgba is the opacity. It ranges between 0 and 1.</p>
+        <p><span>background-image:</span> url("cat.jpg");</p>
+        <p><span>background-repeat:</span>repeat-x | repeat-y | no-repeat;</p>
+        <p><span>background-position:</span> right top</p>
+        <p><span>background-attachment:</span> scroll | fixed</p>
+        <p><span>background:</span> #333 url("cat.jpg") no-repeat right top;</p>
     </div>
     <div class="rulesbox">
-        <h1>Images</h1>
-        <p><span></span></p>
-        <p><span></span></p>
+        <h1>Links</h1>
+        <p class="highlight">Links can be styled with any CSS property</p>
+        <p class="highlight">Links have four states:</p>
+        <p>a:link {</p>
+            <p class="indent">color: blue</p>
+        <p>}</p>
+        <p>a:visited {</p>
+            <p class="indent">color: purple</p>
+        <p>}</p>
+        <p>a:hover {</p>
+            <p class="indent">color: red</p>
+        <p>}</p>
+        <p>a:active {</p>
+            <p class="indent">color: green</p>
+        <p>}</p>
+        <br>
+        <p class="highlight">To style a link as a button:</p>
+        <p>a:link, a:visited {</p>
+        <p class="indent">background-color: white;</p>
+        <p class="indent">color: #333;</p>
+        <p class="indent">padding: 14px 25x;</p>
+        <p class="indent">text-align: center;</p>
+        <p class="indent">text-decoration: none;</p>
+        <p class="indent">display: inline-block;</p>
+        <p>}</p>
+        <p>a:hover, a:active {</p>
+        <p class="indent">background-color: #333</p>
+        <p class="indent">color: white</p>
+        <p>}</p>
     </div>
-
-
-
-
-
-
-
-
-
-
-    <div class="row">
-        <div class="rule">
-            <p><span></span></p>
-        </div>
-        <div class="definition">
-            <p></p>
-        </div>
-    </div>
-
-<!--
-
-
-            <p><span>text-decoration:</span> none | overline | line-through | underline;</p>
-
--->
-    
-
-
-
-
-    
-
+    <div class="rulesbox">
+        <h1>Lists</h1>
+        <p><span>list-style-type:</span> circle | square | upper-roman | lower-aplha;</p>
+        <p><span>list-style-image:</span> url('cat.jpg');</p>
+        <p><span>list-style-position:</span> outside | inside;</p>
+        <p><span>list-style:</span> circle inside url("cat.jpg");</p>
+        <p>Any styles added to the list ol or ul tag will affect the whole list</p>
+        <ol class="style">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <p>Any styles added to the li items will only affect the list items</p>
+        <ol>
+            <li class="style">one</li>
+            <li class="style">two</li>
+            <li class="style">three</li>
+        </ol>
 </div>
 
 {% endblock %}

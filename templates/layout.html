@@ -10,10 +10,10 @@
 <!--This file exists so that each template doesn't have to repeat core html tags-->
 <body>
     {% include 'includes/_navbar.html' %}
-    <div class="pagecontainer">
-        {% block body %}
+    {% block body %}
+
         
-        {% endblock %}
+    {% endblock %}
     </div>
 
 </body>

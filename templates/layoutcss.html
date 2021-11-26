@@ -1,0 +1,156 @@
+{% extends 'layout.html' %} <!--This extends layout so you don't repeat core code-->
+
+{% block body %}
+
+<div class="pagecontainer">
+    <div class="intro">
+        <h1>CSS Layout</h1>
+        <h2>Quick Links</h2>
+        <div class="header_row">
+            <ul>
+                <li>Display</li>
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="rulesbox">
+        <h1>Display and Layout</h1>
+        <p><span>display:</span> none | inline | block | inline-block</p>
+        <p class="highlight">inline:</p>
+        <div class="displayex">
+            <p>Lorem ipsum dolor sit. <span class="inline">lorem</span>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p>You can set height and width on inline-block and block elements.</p>
+        <p class="highlight">inline-block:</p>
+        <div class="displayex">
+            <p>Lorem ipsum dolor sit. <span class="inline-block">lorem</span>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p class="highlight">block:</p>
+        <div class="displayex">
+            <p>Lorem ipsum dolor sit. <span class="block">lorem</span>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p><span>position:</span> static | relative | fixed | absolute | sticky</p>
+        <p class="note">after setting the position property, you can position the element using top, bottom, left and right properties</p>
+        <p>static - default positioning</p>
+        <p>relative - position relative to its normal position</p>
+        <p>fixed - position relative to the viewport (not affected by scroll)</p>
+        <p>absolute - position relative to parent container (will be removed from normal flow and can overlap elements)</p>
+        <p>sticky - relative position until it meets a given offset position, it then becomes fixed</p>
+        <p><span>z-index:</span> -1 |0 | 1 | etc...;</p>
+        <p><span>overflow:</span> visible | hidden | scroll | auto;</p>
+        <p class="note">auto is similar to scroll, but only adds scrollbars when necessary</p>
+        <p><span>overflow-x:</span> visible | hidden | scroll | auto;</p>
+        <p class="note">specifies what to do on the left/right edges</p>
+        <p><span>overflow-y:</span> visible | hidden | scroll | auto;</p>
+        <p class="note">specifies what to do on the top/bottom edges</p>
+        <p><span>float:</span> left | right | none | inherit;</p>
+        <p class="note">you can use float to wrap text around images mostly</p>
+        <p><span>clear:</span> none | left | right | both | inherit;</p>
+        <p class="note">you use clear on an element after float if you want to float an element to one side, while keeping the next element below.</p>
+        <p><span>margin:</span> auto;</p>
+        <p class="note">setting the margin to auto splits the remaining space after the width has been set between the two margins</p>
+        <p>To center an image:</p>
+        <p>img {</p>
+        <p class="indent">display: block;</p>
+        <p class="indent">margin: auto;</p>
+        <p class="indent">width: 40%;</p>
+        <p>}</p>
+    </div>
+
+    <div class="rulesbox">
+        <h1>Flexbox</h1>
+        <h2>Flex container properties: </h2>
+        <p><span>display:</span> flex</p>
+        <p><span>flex-direction:</span> column | column-reverse | row | row-reverse</p>
+        <p class="note">in which direction the container should stack the items.</p>
+        <p><span>flex-wrap:</span> wrap | no-wrap | wrap-reverse</p>
+        <p class="note">specifies whether flex items should wrap or not</p>
+        <p><span>flex-flow:</span> row wrap</p>
+        <p class="note">shorthand for settingflex-direction and flex-wrap</p>
+        <p><span>justify-content:</span> center | flex-start | flex-end | space-around | space-between</p>
+        <p class="note">align the flex items</p>
+        <p><span>align-items:</span> center | flex-start | flex-end | stretch | baseline</p>
+        <p class="note">also to align the flex items.</p>
+        <p><span>align-content:</span>space-between | space-around | stretch | center | flex-start | flex-end</p>
+        <p class="note">used to align the flex lines</p>
+        <br>
+        <h2>Flex item properties: </h2>
+        <p><span>order:</span> 1 | 2 | 3 | 4 etc...</p>
+        <p class="note">changes the order of the items</p>
+        <p><span>flex-grow:</span> 1 | 2 | 3 | 4 etc...</p>
+        <p class="note">specifies how much an item will grow relative to the other items.</p>
+        <p><span>flex-shrink:</span> 1 | 2 | 3 | 4 etc...</p>
+        <p class="note">specifies how much an item will shrink relative to the other items.</p>
+        <p><span>flex-basis:</span> 200px</p>
+        <p class="note">specifies the initial length of a flex-item</p>
+        <p><span>flex:</span> 0 1 300px</p>
+        <p class="note">shorthand for flex-grow, flex-shrink and flex-basis properties</p>
+        <p><span>align-self:</span> center | flex-start | flex-end</p>
+        <p class="note">specifies the alignment for the item inside the container. It overrides the container settings.</p>
+        <br>
+        <h2>Responsive flex-box:</h2>
+        <p>How to get items to run horizontally on laptops and stack on mobiles</p>
+        <p>.flex-container {</p>
+        <p class="indent">display: flex;</p>
+        <p class="indent">flex-direction: row;</p>
+        <p>}</p>
+        <p>@media (max-width: 800px) {</p>
+        <p class="indent">.flex-container {</p>
+        <p class="indent indenttwo">flex-direction: column;</p>
+        <p class="indent">}</p>
+        <p>}</p>
+    </div>
+
+    <div class="rulesbox">
+        <h1>CSS Grid</h1>
+        <p>A grid consists of a parent element with child elements organised in rows and columns</p>
+        <h2>Grid container properties:</h2>
+        <p><span>display:</span> grid | inline-grid;</p>
+        <p><span>grid-gap:</span> 20px | 15px 20px;</p>
+        <p class="note">sets the gaps for the rows and columns</p>
+        <p><span>grid-column-gap:</span> 30px;</p>
+        <p><span>grid-row-gap:</span> 10px;</p>
+        <p>The gaps between the rows and columns are called lines. We refer to the lines when placing an item.</p>
+        <p>The far left and far top lines are column one and row one.</p>
+        <p><span>grid-column-start:</span> 1;</p>
+        <p><span>grid-column-end:</span> 3;</p>
+        <p><span>grid-row-start:</span> 2;</p>
+        <p><span>grid-row-end:</span> 5;</p>
+        <p><span>grid-template-columns:</span> auto auto auto auto;</p>
+        <p><span>grid-template-columns:</span> 20px auto 30px 15px;</p>
+        <p class="note">defines the number of columns. Four x auto = equal width. Each value specifies width.</p>
+        <p><span>grid-template-rows:</span> auto auto auto auto;</p>
+        <p><span>grid-template-rows:</span> 20px auto 30px 15px;</p>
+        <p class="note">defines the number of rows. Each values specifies the height.</p>
+        <p><span>justify-content</span> space-evenly | space-around | space-between | center | start | end</p>
+        <p class="note">To align the whole grid horizontally inside the container</p>
+        <p><span>align-items</span> space-evenly | space-around | space-between | center | start | end</p>
+        <p class="note">To align the whole grid vertically inside the container</p>
+        <h2>Grid item properties:</h2>
+        <p><span>grid-column: 1 / 5 | 1 / span 3 | </span></p>
+        <p class="note">defines which column(s) to place an item in. Define the start line and end line.</p>
+        <p><span>grid-row: 1 / 5 | 1 / span 3 | </span></p>
+        <p class="note">defines which row(s) to place an item in. Define the start line and end line.</p>
+        <p><span>grid-area:</span> 1 / 2 / 5 / 6</p>
+        <p class="note">shorthand for grid-row-start, grid-row-end, grid-column-start and grid-column-end</p>
+        <p><span></span></p>
+        <p><span></span></p>
+        <p><span></span></p>
+        <p><span></span></p>
+        <p><span></span></p>
+        <p><span></span></p>
+    </div>
+    <div class="rulesbox">
+        <h1>Media Queries</h1>
+        <p>To set values for a screen smaller than your starting window:</p>
+        <p>@media (max-width: 480px) {</p>
+        <p class="indent">.flex-container {</p>
+        <p class="indent indenttwo">background-color: lightseablue;</p>
+        <p class="indent">}</p>
+    </div>
+</div>
+
+{% endblock %}

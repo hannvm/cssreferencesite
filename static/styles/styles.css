@@ -3,6 +3,7 @@
 * {
     margin : 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Nav Bar Stylings */
@@ -42,7 +43,6 @@ nav a, .navtitle {
 
 .pagecontainer {
     margin: 60px;
-    font-family: 'Open Sans', sans-serif;
     color: #333;
 }
 
@@ -82,17 +82,17 @@ p a:hover {
     align-items: center;
 }
 
-.csspage h1 {
+h1 {
     margin: 20px;
     margin-left: 0;
     font-size: 40px;
 }
 
-.csspage h2 {
+h2 {
     margin-bottom: 20px;
 }
 
-.csspage ul {
+ul {
     list-style: square;
     list-style-position: inside;
     margin-left: 40px;
@@ -113,12 +113,15 @@ p a:hover {
     margin-top: 15px;
 }
 
-.rulesbox span {
+.rulesbox span, .highlight {
     font-weight: 700;
 }
 
 .indent {
     margin-left: 25px;
+}
+.indenttwo {
+    margin-left: 50px;
 }
 
 .note {
@@ -177,9 +180,46 @@ p a:hover {
 
 .bmodel {
     position: relative;
-    /*make all the text slightly higher */
+    bottom: 10px;
 }
 
+.style {
+    background-color: lightskyblue;
+}
+
+.displayex {
+    height: fit-content;
+    width: 600px;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+span.inline {
+    display: inline;
+    background-color: hotpink;
+}
+
+span.inline-block {
+    display: inline-block;
+    height: 75px;
+    width: 100px;
+    background-color: hotpink;
+}
+
+span.block {
+    display: block;
+    height: 75px;
+    width: 100px;
+    background-color: hotpink;
+}
+
+.float {
+    border: 1px solid #333;
+}
+
+.float .floatone {
+    float: left;
+}
 
 
 
